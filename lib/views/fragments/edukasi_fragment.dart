@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'fragments.dart';
 
 class EdukasiFragment extends StatelessWidget {
   const EdukasiFragment({ Key key }) : super(key: key);
@@ -12,8 +12,8 @@ class EdukasiFragment extends StatelessWidget {
         Text('ini fragment edukasi'),
         Container(
           margin: EdgeInsets.only(top: 20),
-          color: Colors.amber,
-          width: 200,
+          color: Colors.blue,
+          width: 300,
           height: 200,
         )
       ],

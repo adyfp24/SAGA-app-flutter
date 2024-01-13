@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'fragments.dart';
 
 class KonsultasiFragment extends StatefulWidget {
  
@@ -22,9 +22,9 @@ class _KonsultasiFragmentState extends
         Text('ini fragment konsultasi'),
         Container(
           margin: EdgeInsets.only(top: 20),
-          color: Colors.amber,
+          color: Colors.cyan,
           width: 200,
-          height: 200,
+          height: 300,
         )
       ],
     ));

@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:new_app/views/fragments/edukasi_fragment.dart';
-import 'package:new_app/views/fragments/home_fragment.dart';
-import 'package:new_app/views/fragments/konsultasi_fragment.dart';
+part of 'pages.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -12,13 +9,53 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
+  //List<String>_appbarTittle = ['konsultasi','homepage','edukasi'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Homepage'),
-      ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+          child: AppBar(
+        title: Text(
+          'hallo Ady!',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.lightBlueAccent, // Warna latar belakang
+        elevation: 0, // Tidak ada bayangan
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: null,
+          ),
+          SizedBox(width: 16),
+          IconButton(
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://avatars.githubusercontent.com/u/75353116?v=4'), // Ganti dengan gambar profil Anda
+            ),
+            onPressed: null,
+          ),
+          SizedBox(width: 16),
+        ],
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                // Tambahkan fungsi menu jika diperlukan
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
+      )),
       body: [
         const KonsultasiFragment(),
         const HomeFragment(),
@@ -39,6 +76,8 @@ class _HomePageState extends State<HomePage> {
             label: 'Edukasi',
           ),
         ],
+        backgroundColor: Colors.white,
+        elevation: 0,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),
