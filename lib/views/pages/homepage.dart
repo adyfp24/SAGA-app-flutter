@@ -9,53 +9,53 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
-  //List<String>_appbarTittle = ['konsultasi','homepage','edukasi'];
+  List<String> _appbarTittle = ['konsultasi', 'home', 'edukasi'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
-          child: AppBar(
-        title: Text(
-          'hallo Ady!',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.lightBlueAccent, // Warna latar belakang
-        elevation: 0, // Tidak ada bayangan
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20),
-            bottomRight: Radius.circular(20),
-          ),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.notifications),
-            onPressed: null,
-          ),
-          SizedBox(width: 16),
-          IconButton(
-            icon: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://avatars.githubusercontent.com/u/75353116?v=4'), // Ganti dengan gambar profil Anda
+          preferredSize: Size.fromHeight(65),
+          child: Center(
+              child: AppBar(
+            title: Text(
+              _appbarTittle[_selectedIndex],
+              style: TextStyle(color: Colors.white),
             ),
-            onPressed: null,
-          ),
-          SizedBox(width: 16),
-        ],
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                // Tambahkan fungsi menu jika diperlukan
-                Scaffold.of(context).openDrawer();
+            backgroundColor: Colors.lightBlue[100],
+            elevation: 2, // Tidak ada bayangan
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.notifications),
+                onPressed: null,
+              ),
+              IconButton(
+                icon: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://avatars.githubusercontent.com/u/75353116?v=4'), // Ganti dengan gambar profil Anda
+                ),
+                onPressed: null,
+              ),
+              SizedBox(width: 16),
+            ],
+            leading: Builder(
+              builder: (BuildContext context) {
+                return IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: () {
+                    // Tambahkan fungsi menu jika diperlukan
+                    Scaffold.of(context).openDrawer();
+                  },
+                );
               },
-            );
-          },
-        ),
-      )),
+            ),
+          ))),
       body: [
         const KonsultasiFragment(),
         const HomeFragment(),
