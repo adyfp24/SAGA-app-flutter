@@ -8,13 +8,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 1;
-  List<String> _appbarTittle = ['konsultasi', 'home', 'edukasi'];
+  int _selectedIndex = 0;
+  List<String> _appbarTittle = ['home', 'konsultasi', 'edukasi', 'newspaper'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
+      super: PreferredSize(
           preferredSize: Size.fromHeight(65),
           child: Center(
               child: AppBar(
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(color: Colors.white),
             ),
             backgroundColor: Colors.lightBlue[100],
-            elevation: 2, // Tidak ada bayangan
+            elevation: 2, 
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 icon: CircleAvatar(
                   backgroundImage: NetworkImage(
-                      'https://avatars.githubusercontent.com/u/75353116?v=4'), // Ganti dengan gambar profil Anda
+                      'https://avatars.githubusercontent.com/u/75353116?v=4'),
                 ),
                 onPressed: null,
               ),
@@ -49,7 +49,6 @@ class _HomePageState extends State<HomePage> {
                 return IconButton(
                   icon: Icon(Icons.menu),
                   onPressed: () {
-                    // Tambahkan fungsi menu jika diperlukan
                     Scaffold.of(context).openDrawer();
                   },
                 );
@@ -57,23 +56,28 @@ class _HomePageState extends State<HomePage> {
             ),
           ))),
       body: [
-        const KonsultasiFragment(),
         const HomeFragment(),
+        const KonsultasiFragment(),
         const EdukasiFragment(),
+        const NewsPaper()
       ][_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Konsultasi',
-          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'Konsultasi',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'Edukasi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.pages),
+            label: 'Newspaper',
           ),
         ],
         backgroundColor: Colors.white,

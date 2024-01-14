@@ -1,4 +1,5 @@
-part of 'fragments.dart';
+// part of 'fragments.dart';
+import 'package:flutter/material.dart';
 
 class KonsultasiFragment extends StatefulWidget {
  
