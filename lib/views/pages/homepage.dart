@@ -1,5 +1,6 @@
 part of 'pages.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
 
@@ -80,6 +81,7 @@ class _HomePageState extends State<HomePage> {
             label: 'Newspaper',
           ),
         ],
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
         elevation: 0,
         currentIndex: _selectedIndex,

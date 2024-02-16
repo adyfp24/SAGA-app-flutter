@@ -7,4 +7,6 @@ class Newspaper{
     this.judul_berita, 
     this.tanggal_terbit, 
     this.penulis);
+
+  static fromJson(json) {}
 }

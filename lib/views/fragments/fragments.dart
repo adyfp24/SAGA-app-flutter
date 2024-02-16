@@ -1,7 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:new_app/views/pages/detail_fitur.dart';
+import 'dart:convert';
 
-part 'home_fragment.dart';
-part 'edukasi_fragment.dart';
-part 'konsultasi_fragment.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:http/http.dart' as http;
+import 'package:new_app/views/pages/auth/login.dart';
+
+import '../../models/edukasi.dart';
+
+part 'home.dart';
+part 'komunitas.dart';
+part 'konseling.dart';
 part 'newspaper_fragment.dart';
