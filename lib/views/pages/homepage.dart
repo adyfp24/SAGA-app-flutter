@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.lightBlue[100],
         elevation: 0,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

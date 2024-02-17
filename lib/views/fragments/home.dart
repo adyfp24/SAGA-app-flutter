@@ -17,12 +17,12 @@ class HomeFragment extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: 70,
-                      height: 70,
+                      width: 100,
+                      height: 100,
                       margin: EdgeInsets.only(top: 20, right: 20),
                       child: ClipOval(
-                        child: Image.network(
-                          'https://avatars.githubusercontent.com/u/75353116?v=4',
+                        child: Image.asset(
+                          'images/ppsaga.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -35,62 +35,44 @@ class HomeFragment extends StatelessWidget {
                           Text(
                             'Ady Firdaus',
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 25, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             height: 8,
                           ),
-                          Text('Pelajar - 20 tahun')
+                          Text('Warrior - 20 tahun')
                         ],
                       ),
                     )
                   ],
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 20, bottom: 20),
-                  child: Row(
-                    children: [
-                      Expanded(
-                          child: Container(
-                        margin: EdgeInsets.only(top: 20),
-                        height: 150,
-                        decoration: BoxDecoration(
-                            color: Colors.lightBlue[100],
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(15))),
-                      ))
-                    ],
-                  ),
-                ),
                 Row(
                   children: [
                     Flexible(
-                        flex: 1,
-                        child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 20, 10, 20),
-                          height: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            color: Colors.lightBlue[100],
+                      child: Container(
+                        margin: EdgeInsets.only(top: 15, left: 13, bottom: 70),
+                        child: Center(
+                          child: Image.asset(
+                            'images/livekonsul.png',
                           ),
-                        )),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Flexible(flex: 1, child: Image.asset('images/mission.png')),
+                    SizedBox(width: 30),
                     Flexible(
-                        flex: 1,
-                        child: Container(
-                          margin: EdgeInsets.fromLTRB(10, 20, 0, 20),
-                          height: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            color: Colors.lightBlue[100],
-                          ),
-                        ))
+                        flex: 1, child: Image.asset('images/monitoring.png'))
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 0, bottom: 20),
+                      padding: EdgeInsets.only(top: 40, bottom: 20),
                       child: Container(
                         child: Text(
                           'lorem ipsus dor sit amet',
