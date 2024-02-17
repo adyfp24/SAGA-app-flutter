@@ -49,20 +49,39 @@ class HomeFragment extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                      child: Container(
-                        margin: EdgeInsets.only(top: 15, left: 13, bottom: 70),
-                        child: Center(
-                          child: Image.asset(
-                            'images/livekonsul.png',
-                          ),
-                        ),
-                      ),
-                    ),
+                        child: InkWell(
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  top: 15, left: 13, bottom: 70),
+                              child: Center(
+                                child: Image.asset(
+                                  'images/livekonsul.png',
+                                ),
+                              ),
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          KonsultasiFragment()));
+                            })),
                   ],
                 ),
                 Row(
                   children: [
-                    Flexible(flex: 1, child: Image.asset('images/mission.png')),
+                    Flexible(
+                      flex: 1,
+                      child: InkWell(
+                        child: Image.asset('images/mission.png'),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MissionPage()));
+                        },
+                      ),
+                    ),
                     SizedBox(width: 30),
                     Flexible(
                         flex: 1, child: Image.asset('images/monitoring.png'))
@@ -72,7 +91,7 @@ class HomeFragment extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 40, bottom: 20),
+                      padding: EdgeInsets.only(top: 45, bottom: 20),
                       child: Container(
                         child: Text(
                           'lorem ipsus dor sit amet',
