@@ -22,7 +22,7 @@ class HomeFragment extends StatelessWidget {
                       margin: EdgeInsets.only(top: 20, right: 20),
                       child: ClipOval(
                         child: Image.asset(
-                          'images/ppsaga.png',
+                          'images/profile-saga.png',
                           fit: BoxFit.cover,
                         ),
                       ),
