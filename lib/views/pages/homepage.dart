@@ -15,6 +15,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // floatingActionButton: FloatingActionButton(child: Icon(Icons.home), onPressed: null),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(65),
           child: Center(

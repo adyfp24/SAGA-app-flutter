@@ -1,5 +1,4 @@
 import 'dart:html';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:new_app/views/pages/auth/register.dart';
@@ -20,11 +19,11 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    final TapGestureRecognizer _tapGestureRecognizer = TapGestureRecognizer()
-      ..onTap = () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => RegistPage()));
-      };
+    final TapGestureRecognizer _tapGestureRecognizer = TapGestureRecognizer();
+    _tapGestureRecognizer.onTap = () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => RegistPage()));
+    };
     return Scaffold(
       body: Container(
         color: Colors.lightBlue[50],

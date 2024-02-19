@@ -11,36 +11,45 @@ class _MissionPageState extends State<MissionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('misi'),backgroundColor: Colors.lightBlue[100],),
+      appBar: AppBar(
+        title: Text('misi', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+        backgroundColor: Colors.lightBlue[100],
+      ),
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.fromLTRB(30, 30, 30, 10),
             width: double.infinity,
-            height: 100,
-            color: Colors.amberAccent,
-            child: Text('deskripsi misi'),
+            height: 75,
+            child: Text(
+              'ini adalah halaman misi, selesaikan semua misi untuk melawan adiksimu dan meningkatkan title mu menjadi seorang VETERAN, semangat!',
+              textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+            ),
           ),
           SizedBox(height: 20),
           Container(
             width: double.infinity,
             height: 150,
-            color: Colors.amberAccent,
-            child: Text('misi 1'),
+            child: InkWell(
+              child: Image.asset('images/misi1.png'),
+            ),
           ),
           SizedBox(height: 20),
           Container(
             width: double.infinity,
             height: 150,
-            color: Colors.amberAccent,
-            child: Text('misi 2'),
+            child: InkWell(
+              child: Image.asset('images/misi2.png'),
+            ),
           ),
           SizedBox(height: 20),
           Container(
             width: double.infinity,
             height: 150,
-            color: Colors.amberAccent,
-            child: Text('misi 3'),
+            child: InkWell(
+              child: Image.asset('images/misi3.png'),
+            ),
           )
         ],
       ),

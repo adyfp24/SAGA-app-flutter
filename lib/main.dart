@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/views/pages/auth/login.dart';
+import 'package:new_app/views/pages/misi/misi.dart';
 import 'package:new_app/views/pages/pages.dart';
 
 void main() {
