@@ -12,13 +12,14 @@ class _MissionPageState extends State<MissionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // automaticallyImplyLeading: false,
         title: Text('misi', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
         backgroundColor: Colors.lightBlue[100],
       ),
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.fromLTRB(30, 30, 30, 10),
+            margin: EdgeInsets.fromLTRB(35, 30, 35, 10),
             width: double.infinity,
             height: 75,
             child: Text(

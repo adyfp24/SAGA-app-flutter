@@ -61,15 +61,16 @@ class HomeFragment extends StatelessWidget {
                           ),
                           onTap: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Scaffold(
-                                      appBar: AppBar(
-                                        title: Text('konsultasi'),
-                                      ),
-                                      body: KonsultasiFragment(),
-                                      ),
-                                ));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Scaffold(
+                                  appBar: AppBar(
+                                    title: Text('konsultasi'),
+                                  ),
+                                  body: KonsultasiFragment(),
+                                ),
+                              ),
+                            );
                           },
                         ),
                       ),
@@ -94,7 +95,17 @@ class HomeFragment extends StatelessWidget {
                       SizedBox(width: 30),
                       Flexible(
                         flex: 1,
-                        child: Image.asset('images/monitoring.png'),
+                        child: InkWell(
+                          child: Image.asset('images/monitoring.png'),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => MonitoringPage()),
+                              ),
+                            );
+                          },
+                        ),
                       )
                     ],
                   ),
