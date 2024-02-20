@@ -2,6 +2,7 @@ import 'dart:html';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:new_app/views/pages/auth/register.dart';
+import 'package:new_app/views/pages/guide/guideOne.dart';
 import 'package:new_app/views/pages/pages.dart';
 
 class LoginPage extends StatefulWidget {
@@ -12,11 +13,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  void _toHomepage() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => HomePage()));
-  }
-
   @override
   Widget build(BuildContext context) {
     final TapGestureRecognizer _tapGestureRecognizer = TapGestureRecognizer();
@@ -117,7 +113,8 @@ class _LoginPageState extends State<LoginPage> {
                       TextField(
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                             prefixIcon: Icon(Icons.person),
                             labelText: 'username'),
                       ),
@@ -136,7 +133,14 @@ class _LoginPageState extends State<LoginPage> {
                         width: double.infinity,
                         height: 50,
                         child: TextButton(
-                          onPressed: _toHomepage,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => GuideOnePage()),
+                              ),
+                            );
+                          },
                           child: Text(
                             'login',
                             style: TextStyle(

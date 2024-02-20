@@ -8,7 +8,6 @@ class NewsPaper extends StatefulWidget {
 }
 
 class _NewsPaperState extends State<NewsPaper> {
-  @override
   void fetchData() async{
     String _url = 'http://127.0.0.1:8000/api/topikpertanyaan';
     var response = await http.get(Uri.parse(_url));
@@ -17,9 +16,10 @@ class _NewsPaperState extends State<NewsPaper> {
 
     Map<String, dynamic> rilData = decodedData[2];
     setState(() {
-      
+    
     }); 
   }
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
