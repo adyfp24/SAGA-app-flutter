@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:new_app/views/pages/pages.dart';
 
 class GuideTwoPage extends StatelessWidget {
-  const GuideTwoPage({ Key key }) : super(key: key);
+  const GuideTwoPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,10 @@ class GuideTwoPage extends StatelessWidget {
             height: 200,
             width: double.infinity,
             decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage('images/guide2.png'))),
+              image: DecorationImage(
+                image: AssetImage('images/guide2.png'),
+              ),
+            ),
           ),
           SizedBox(
             height: 20,

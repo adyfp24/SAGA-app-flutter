@@ -1,12 +1,15 @@
 class Newspaper{
-  String judul_berita;
-  String tanggal_terbit;
+  String judulBerita;
+  String tanggalTerbit;
   String penulis;
 
   Newspaper(
-    this.judul_berita, 
-    this.tanggal_terbit, 
+    this.judulBerita, 
+    this.tanggalTerbit, 
     this.penulis);
 
-  static fromJson(json) {}
+  static fromJson(json) {
+
+  }
+
 }
