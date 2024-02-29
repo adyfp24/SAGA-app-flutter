@@ -11,7 +11,7 @@ class HomeFragment extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
+              margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
               child: Column(
                 children: [
                   Row(
@@ -113,7 +113,7 @@ class HomeFragment extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 45, bottom: 20),
+                        padding: EdgeInsets.only(top: 60, bottom: 20),
                         child: Container(
                           child: Text(
                             'lorem ipsus dor sit amet',
