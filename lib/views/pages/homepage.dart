@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
         const HomeFragment(),
         const KonsultasiFragment(),
         const EdukasiFragment(),
-        const NewsPaper()
+         NewsPaper()
       ][_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [

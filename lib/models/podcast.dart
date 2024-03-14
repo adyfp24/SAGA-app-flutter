@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 class Podcast {
-  int idPodcast;
-  String judulPodcast;
-  String linkPodcast;
-  String totalLikes;
-  String deskripsi;
+  final int idPodcast;
+  final String judulPodcast;
+  final String linkPodcast;
+  final String totalLikes;
+  final String deskripsi;
 
   Podcast(this.idPodcast, this.judulPodcast, this.linkPodcast, this.totalLikes, this.deskripsi);
 

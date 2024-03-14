@@ -11,7 +11,11 @@ class EdukasiFragment extends StatelessWidget {
       children: [
         TextButton(
             onPressed: () => Navigator.push(
-                context, MaterialPageRoute(builder: (context) => LoginPage())),
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                ),
             child: Text('ke halaman login')),
         Container(
           margin: EdgeInsets.only(top: 20),
